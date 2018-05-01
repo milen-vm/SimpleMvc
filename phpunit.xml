@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         pocessIsolation="false"
+         stopOnFailure="true"
+         sintaxCheck="false"
+>
+    <testsuites>
+        <testsuite name="Application Test Simple Mvc">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
