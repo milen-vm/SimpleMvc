@@ -7,4 +7,4 @@ require_once ROOT_DIR . 'vendor' . DS . 'autoload.php';
 $configs = require_once ROOT_DIR . 'config' . DS . 'config.php';
 $config = \SimpleMvc\Config::getInstance($configs);
 
-$request = new \SimpleMvc\Request();
+$request = \SimpleMvc\Request::getInstance();

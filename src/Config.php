@@ -26,7 +26,7 @@ class Config
         return self::$instance;
     }
 
-    public static function get($str)
+    public function get($str)
     {
         $keys = explode('.', $str);
         $result = self::$configs;
