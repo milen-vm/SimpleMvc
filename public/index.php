@@ -3,6 +3,8 @@ const DS = DIRECTORY_SEPARATOR;
 const ROOT_DIR = __DIR__ . DS . '..' . DS;
 
 require_once ROOT_DIR . 'vendor' . DS . 'autoload.php';
-$config = require_once ROOT_DIR . 'config' . DS . 'config.php';
+
+$configs = require_once ROOT_DIR . 'config' . DS . 'config.php';
+$config = \SimpleMvc\Config::getInstance($configs);
 
 $request = new \SimpleMvc\Request();
