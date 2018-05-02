@@ -4,6 +4,8 @@ namespace SimpleMvc;
 class Request
 {
 
+    private static $instance = null;
+
     private $uri;
 
     private $controller;
@@ -12,13 +14,22 @@ class Request
 
     private $method;
 
-    private $params;
+    private $params = [];
 
-    public function __construct()
+    private function __construct()
     {
         $this->setUri();
         $this->setMethod();
         $this->parseUri();
+    }
+
+    public static function getInstance()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
     }
 
     private function setUri()
@@ -56,5 +67,25 @@ class Request
         }
 
         $this->params = $parts;
+    }
+
+    public function controller()
+    {
+        return $this->controller;
+    }
+
+    public function action()
+    {
+        return $this->action;
+    }
+
+    public function method()
+    {
+        return $this->method;
+    }
+
+    public function params()
+    {
+        return $this->params;
     }
 }
