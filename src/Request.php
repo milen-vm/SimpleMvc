@@ -59,10 +59,10 @@ class Request
         }
 
         if (count($parts)) {
-            $this->controller = strtolower(array_shift($parts));
+            $this->controller = array_shift($parts);
 
             if (count($parts)) {
-                $this->action = strtolower(array_shift($parts));
+                $this->action = array_shift($parts);
             }
         }
 
