@@ -15,12 +15,12 @@ class App
     private $action;
 
     /**
-     * @var \SimpleMvc\Request
+     * @var \SimpleMvc\Core\Request
      */
     private $request;
 
     /**
-     * @var \SimpleMvc\Config
+     * @var \SimpleMvc\Core\Config
      */
     private static $configs;
 

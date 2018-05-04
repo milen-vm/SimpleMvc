@@ -15,7 +15,7 @@ class Config
 
     /**
      * @param array $configs
-     * @return \SimpleMvc\Config
+     * @return \SimpleMvc\Core\Config
      */
     public static function getInstance($configs = [])
     {
