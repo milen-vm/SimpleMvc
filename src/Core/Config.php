@@ -1,5 +1,5 @@
 <?php
-namespace SimpleMvc;
+namespace SimpleMvc\Core;
 
 class Config
 {
