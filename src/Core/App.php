@@ -94,6 +94,10 @@ class App
 
     public static function config($config)
     {
+        if (self::$configs === null) {
+            throw new \Exception('App is not started.');
+        }
+        
         return self::$configs->get($config);
     }
 }
