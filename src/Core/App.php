@@ -97,7 +97,7 @@ class App
         if (self::$configs === null) {
             throw new \Exception('App is not started.');
         }
-        
+
         return self::$configs->get($config);
     }
 }
