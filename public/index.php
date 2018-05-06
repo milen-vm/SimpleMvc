@@ -1,6 +1,6 @@
 <?php
-const DS = DIRECTORY_SEPARATOR;
-const ROOT_DIR = __DIR__ . DS . '..' . DS;
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT_DIR', __DIR__ . DS . '..' . DS);
 
 require_once ROOT_DIR . 'vendor' . DS . 'autoload.php';
 
