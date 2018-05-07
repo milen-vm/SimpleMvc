@@ -1,6 +1,7 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
-define('ROOT_DIR', __DIR__ . DS . '..' . DS);
+define('ROOT_DIR', dirname(dirname(__FILE__)) . DS);
+define('VIEWS_DIR', ROOT_DIR . 'src' . DS . 'Views' . DS);
 
 require_once ROOT_DIR . 'vendor' . DS . 'autoload.php';
 
