@@ -12,6 +12,8 @@ class App
 
     private $controller;
 
+    private $controllerName;
+
     private $action;
 
     /**
@@ -57,6 +59,11 @@ class App
         );
     }
 
+    public function getControllerName()
+    {
+        return $this->controllerName;
+    }
+
     private function setController()
     {
         if ($this->request->controller() === null) {
@@ -65,6 +72,7 @@ class App
             $name = $this->request->controller();
         }
 
+        $this->controllerName = $name;
         $class = self::CONTROLLERS_NAMESPACE .
             ucfirst(strtolower($name)) .
             self::CONTROLLERS_SUFFIX;
@@ -74,6 +82,11 @@ class App
         }
 
         $this->controller = new $class();
+    }
+
+    public function getActionName()
+    {
+        return $this->action;
     }
 
     private function setAction()
