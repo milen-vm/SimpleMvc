@@ -1,11 +1,15 @@
 <?php
 namespace SimpleMvc\Controllers;
 
-class HomeController
+use SimpleMvc\Core\Mvc\Controller;
+
+class HomeController extends Controller
 {
 
     public function index()
     {
-        echo 'Home';
+        $this->render([
+            'path' => 'home/index'
+        ]);
     }
 }
