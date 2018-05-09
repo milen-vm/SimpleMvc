@@ -9,7 +9,8 @@ class HomeController extends Controller
     public function index()
     {
         $this->render([
-            'path' => 'home/index'
+            'path' => 'home/index',
+            'model' => ['name' => 'Наме'],
         ]);
     }
 }

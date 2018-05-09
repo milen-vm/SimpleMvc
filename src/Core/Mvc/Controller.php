@@ -6,6 +6,7 @@ abstract class Controller
 
     /**
      * @param array $params
+     * @throws \Exception
      */
     public function render($params = [])
     {
