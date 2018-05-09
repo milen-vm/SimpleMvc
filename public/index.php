@@ -2,6 +2,7 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT_DIR', dirname(dirname(__FILE__)) . DS);
 define('VIEWS_DIR', ROOT_DIR . 'src' . DS . 'Views' . DS);
+define('LINK_PREFIX', rtrim(str_replace($_SERVER['DOCUMENT_ROOT'], '', ROOT_DIR), DS));
 
 require_once ROOT_DIR . 'vendor' . DS . 'autoload.php';
 
